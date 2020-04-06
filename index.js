@@ -7,6 +7,8 @@ dotenv.config();
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, "client")));
+
 app.use(bodyParser.json());
 
 const publicVapidKey = process.env.publicVapidKey;
